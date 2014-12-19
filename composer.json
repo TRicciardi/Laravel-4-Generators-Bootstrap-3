@@ -1,5 +1,5 @@
 {
-    "name": "dollar/generators",
+    "name": "tricciardi/generators",
     "description": "Laravel 4 Generators w/ Bootstrap 3",
     "keywords": ["laravel", "generators", "artisan", "bootstrap", "scaffold"],
     "authors": [
@@ -11,6 +11,11 @@
         {
             "name": "Wes Dollar",
             "email": "github@wesdollar.com",
+            "role": "Contributor"
+        },
+        {
+            "name": "Tiago Ricciardi",
+            "email": "github@ricciardi.com.pt",
             "role": "Contributor"
         }
     ],
