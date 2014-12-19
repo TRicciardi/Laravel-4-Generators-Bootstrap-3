@@ -2,9 +2,18 @@
 
 @section('main')
 
-<h1>All {{Models}}</h1>
+<div class="page-header">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1>{{ trans('{{models}}.all') }}</h1> 
+		</div>
+		<div class="col-sm-4 top-actions">
+			<a href="{{ URL::route('{{models}}.create') }}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> {{ trans('{{models}}.{{model}}') }}</a>
+		</div>
+	</div>
+</div>
 
-<p>{{ link_to_route('{{models}}.create', 'Add New {{Model}}', null, array('class' => 'btn btn-lg btn-success')) }}</p>
+
 
 @if (${{models}}->count())
 	<table class="table table-striped">
@@ -24,7 +33,7 @@
 		</tbody>
 	</table>
 @else
-	There are no {{models}}
+	{{ trans("{{models}}.no_items") }}
 @endif
 
 @stop
