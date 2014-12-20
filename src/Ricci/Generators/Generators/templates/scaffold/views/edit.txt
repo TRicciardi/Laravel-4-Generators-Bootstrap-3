@@ -30,8 +30,8 @@
 <div class="form-group">
 
     <div class="controls">
-      {{ Form::submit('Update', array('class' => 'btn btn-lg btn-primary')) }}
-      {{ link_to_route('{{models}}.show', 'Cancel', ${{model}}->id, array('class' => 'btn btn-lg btn-default')) }}
+      {{ Form::submit(trans('main.update'), array('class' => 'btn btn-lg btn-primary')) }}
+      {{ link_to_route('{{models}}.show', trans('main.cancel'), ${{model}}->id, array('class' => 'btn btn-lg btn-default')) }}
     </div>
 </div>
 

@@ -29,7 +29,8 @@
 
 <div class="form-group">
     <div class="controls">
-          {{ Form::submit('Create', array('class' => 'btn btn-lg btn-primary')) }}
+          {{ Form::submit(trans('main.save'), array('class' => 'btn btn-lg btn-primary')) }}
+          {{ link_to_route('{{models}}.index', trans('main.cancel'), null, array('class' => 'btn btn-lg btn-default')) }}
     </div>
 </div>
 
