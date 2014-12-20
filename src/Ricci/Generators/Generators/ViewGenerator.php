@@ -122,15 +122,15 @@ EOT;
                     break;
 
                 case 'text':
-                    $element = "{{ Form::textarea('$name', Input::old('$name'), array('class'=>'form-control', 'placeholder'=>'$formalName')) }}";
+                    $element = "{{ Form::textarea('$name', Input::old('$name'), array('class'=>'form-control' )) }}";
                     break;
 
                 case 'boolean':
-                    $element = "{{ Form::checkbox('$name') }}";
+                    $element = "{{ Form::yesNo('$name') }}";
                     break;
 
                 default:
-                    $element = "{{ Form::text('$name', Input::old('$name'), array('class'=>'form-control', 'placeholder'=>'$formalName')) }}";
+                    $element = "{{ Form::text('$name', Input::old('$name'), array('class'=>'form-control')) }}";
                     break;
             }
 
@@ -138,7 +138,7 @@ EOT;
             // We can build up the HTML fragment
             $frag = <<<EOT
         <div class="form-group">
-            {{ Form::label('$name', trans('$models.'.'.$name'), array('class'=>' control-label')) }}
+            {{ Form::label('$name', trans('$models.$name'), array('class'=>' control-label')) }}
             <div class="controls">
               $element
             </div>
