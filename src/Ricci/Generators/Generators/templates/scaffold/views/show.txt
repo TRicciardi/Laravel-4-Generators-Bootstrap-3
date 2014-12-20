@@ -2,9 +2,18 @@
 
 @section('main')
 
-<h1>Show {{Model}}</h1>
+<div class="page-header">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1>{{ trans('{{models}}.show') }}</h1>
+		</div>
+		<div class="col-sm-4 top-actions">
+			<a href="{{ URL::route('{{models}}.index') }}" class="btn btn-warning btn-sm"><i class="fa fa-reply"></i> {{ trans('{{models}}.back') }}</a>
+		</div>
+	</div>
+</div>
 
-<p>{{ link_to_route('{{models}}.index', 'Return to All {{models}}', null, array('class'=>'btn btn-lg btn-primary')) }}</p>
+
 
 <table class="table table-striped">
 	<thead>

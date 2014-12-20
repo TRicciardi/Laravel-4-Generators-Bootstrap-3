@@ -9,7 +9,7 @@
 			<h1>{{ trans('{{models}}.show') }}</h1>
 		</div>
 		<div class="col-sm-4 top-actions">
-			<a href="{{ URL::route('{{models}}.index') }}" class="btn btn-warning btn-sm"><i class="fa fa-plus"></i> {{ trans('{{models}}.back') }}</a>
+			<a href="{{ URL::route('{{models}}.create') }}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> {{ trans('{{models}}.create') }}</a>
 		</div>
 	</div>
 </div>
