@@ -107,6 +107,8 @@ EOT;
     public function makeFormElements()
     {
         $formMethods = array();
+        $model  =$this->cache->getModelName();
+        $models = Pluralizer::plural($model); // posts
 
         foreach($this->cache->getFields() as $name => $type)
         {
@@ -136,8 +138,8 @@ EOT;
             // We can build up the HTML fragment
             $frag = <<<EOT
         <div class="form-group">
-            {{ Form::label('$name', '$formalName:', array('class'=>'col-md-2 control-label')) }}
-            <div class="col-sm-10">
+            {{ Form::label('$name', trans('$models.'.'.$name'), array('class'=>' control-label')) }}
+            <div class="controls">
               $element
             </div>
         </div>

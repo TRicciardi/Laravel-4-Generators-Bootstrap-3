@@ -34,7 +34,7 @@
             "Dollar\\Generators": "src/"
         },
         "classmap": [
-            "src/Dollar/Generators/Generators"
+            "src/Ricci/Generators/Generators"
         ]
     },
      "extra": {
