@@ -11,9 +11,7 @@
 			<a href="{{ URL::route('{{models}}.index') }}" class="btn btn-warning btn-sm"><i class="fa fa-reply"></i> {{ trans('{{models}}.back') }}</a>
 		</div>
 	</div>
-</div>
-
-
+</div> 
 
 <table class="table table-striped">
 	<thead>
