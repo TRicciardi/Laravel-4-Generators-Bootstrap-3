@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Dollar\\Generators": "src/"
+            "Ricci\\Generators": "src/"
         },
         "classmap": [
             "src/Ricci/Generators/Generators"
