@@ -1,4 +1,4 @@
-<?php namespace Dollar\Generators;
+<?php namespace Ricci\Generators;
 
 use Illuminate\Filesystem\Filesystem as File;
 

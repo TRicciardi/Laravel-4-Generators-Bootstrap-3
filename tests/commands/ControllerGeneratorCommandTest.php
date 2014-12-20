@@ -1,6 +1,6 @@
 <?php
 
-use Dollar\Generators\Commands\ControllerGeneratorCommand;
+use Ricci\Generators\Commands\ControllerGeneratorCommand;
 use Symfony\Component\Console\Tester\CommandTester;
 use Mockery as m;
 

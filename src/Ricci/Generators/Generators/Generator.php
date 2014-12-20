@@ -1,8 +1,8 @@
 <?php
 
-namespace Dollar\Generators\Generators;
+namespace Ricci\Generators\Generators;
 
-use Dollar\Generators\Cache;
+use Ricci\Generators\Cache;
 use Illuminate\Filesystem\Filesystem as File;
 
 class RequestedCacheNotFound extends \Exception {}

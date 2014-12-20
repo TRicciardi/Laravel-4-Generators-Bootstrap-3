@@ -1,6 +1,6 @@
-<?php namespace Dollar\Generators\Commands;
+<?php namespace Ricci\Generators\Commands;
 
-use Dollar\Generators\Generators\ViewGenerator;
+use Ricci\Generators\Generators\ViewGenerator;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;

@@ -1,8 +1,8 @@
-<?php namespace Dollar\Generators;
+<?php namespace Ricci\Generators;
 
-use Dollar\Generators\Commands;
-use Dollar\Generators\Generators;
-use Dollar\Generators\Cache;
+use Ricci\Generators\Commands;
+use Ricci\Generators\Generators;
+use Ricci\Generators\Cache;
 use Illuminate\Support\ServiceProvider;
 
 class GeneratorsServiceProvider extends ServiceProvider {

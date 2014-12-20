@@ -1,6 +1,6 @@
 <?php
 
-namespace Dollar\Generators\Generators;
+namespace Ricci\Generators\Generators;
 
 class SeedGenerator extends Generator {
 
