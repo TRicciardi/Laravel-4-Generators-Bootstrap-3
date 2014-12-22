@@ -76,8 +76,11 @@ class ViewGenerator extends Generator {
 		
         // First, we build the table headings
         $headings = array_map(function($field) use ($model) {
-			$models = Pluralizer::plural($model);
-            return '<th>{{ trans( "'.$models.'.'. ($field) . '") }}</th>';
+			       $models = Pluralizer::plural($model);
+             if( in_array($field, array('created_by','modified_by', 'approved_by', 'created_at','modified_at','approved_at')))
+                return '<th>{{ trans( "main.'. ($field) . '") }}</th>';
+            else
+              return '<th>{{ trans( "'.$models.'.'. ($field) . '") }}</th>';
         }, array_keys($fields));
 
         // And then the rows, themselves

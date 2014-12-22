@@ -50,7 +50,7 @@ class {{className}} extends BaseController {
 		{
 			$this->{{model}}->create($input);
 
-			return Redirect::route('{{models}}.index');
+			return Response::ajaxified('{{models}}.index');
 		}
 
 		return Redirect::route('{{models}}.create')
@@ -106,7 +106,7 @@ class {{className}} extends BaseController {
 			${{model}} = $this->{{model}}->find($id);
 			${{model}}->update($input);
 
-			return Redirect::route('{{models}}.show', $id);
+			return Response::ajaxified('{{models}}.show', $id);
 		}
 
 		return Redirect::route('{{models}}.edit', $id)
@@ -125,7 +125,7 @@ class {{className}} extends BaseController {
 	{
 		$this->{{model}}->find($id)->delete();
 
-		return Redirect::route('{{models}}.index');
+		return Response::ajaxified('{{models}}.index');
 	}
 
 }
