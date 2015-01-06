@@ -77,7 +77,7 @@ class ViewGenerator extends Generator {
         // First, we build the table headings
         $headings = array_map(function($field) use ($model) {
 			       $models = Pluralizer::plural($model);
-             if( in_array($field, array('created_by','modified_by', 'approved_by', 'created_at','modified_at','approved_at')))
+             if( in_array($field, array('created_by','updated_by', 'approved_by', 'created_at','modified_at','approved_at')))
                 return '<th>{{ trans( "main.'. ($field) . '") }}</th>';
             else
               return '<th>{{ trans( "'.$models.'.'. ($field) . '") }}</th>';
@@ -139,9 +139,13 @@ EOT;
 
             // Now that we have the correct $element,
             // We can build up the HTML fragment
+             if( in_array($field, array('created_by','updated_by', 'approved_by', 'created_at','modified_at','approved_at')))
+                $fieldname = 'main.'.$name;
+            else
+                $fieldname = $models.'.'.$name;
             $frag = <<<EOT
         <div class="form-group">
-            {{ Form::label('$name', trans('$models.$name'), array('class'=>' control-label')) }}
+            {{ Form::label('$name', trans('$fieldname'), array('class'=>' control-label')) }}
             <div class="controls">
               $element
             </div>
